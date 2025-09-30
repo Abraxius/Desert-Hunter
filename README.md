@@ -45,14 +45,22 @@ Plane deine Jagd geschickt, nutze die Umgebung zu deinem Vorteil und behalte dei
 ## Umgesetzte Features und Implementierungen
 Im Rahmen der Entwicklung unseres Spiels haben wir eine Reihe von Features implementiert und bestehende Assets angepasst, um ein immersives und technisch solides Spielerlebnis zu gewährleisten. Unsere Hauptentwicklungsbereiche umfassen:
 
+---
+
 ### 1. Ladebildschirm
 Der Ladebildschirm wurde mittels des AsyncScreenLoading Assets implementiert. Dies ermöglicht die Anzeige von Spieltipps und anderen Informationen während des Ladevorgangs. Ein angepasster Screenshot aus dem Spiel dient als Hintergrundbild, um die Immersion zu fördern. Die notwendigen Einstellungen wurden direkt im Package konfiguriert.
+
+---
 
 ### 2. Bildmaterial
 Für die visuellen Elemente des Spiels wurden sowohl KI-generierte als auch lizenzfreie Bilder verwendet. KI-generierte Grafiken (z.B. für Projektile, UI-Symbole) wurden anschließend in GIMP nachbearbeitet, um deren Qualität und Passform zum Spielstil sicherzustellen.
 
+---
+
 ### 3. Tutorial-System
 Ein kurzes Tutorial führt Spieler in den ersten 30 Sekunden nach Spielstart in die grundlegende Steuerung ein. Die wichtigsten Tasten werden am linken Bildschirmrand visuell dargestellt. Hierfür wurde ein KI-generiertes Tastenbild als Basis verwendet und anschließend bearbeitet, um optimal ins UI zu passen. Die Integration erfolgte über ein UI Widget.
+
+---
 
 ### 4. Akustisches Design
 Es wurden lizensfreie Musik und Soundeffekte ausgewählt und in Animationen sowie Blueprints integriert.
@@ -62,6 +70,8 @@ Gegner-Sounds: Jeder Gegnertyp besitzt spezifische Sounds für Treffer, Tod, Ang
 Waffen-Sounds: Die Waffe verfügt über entsprechende Schuss und Ladegeräusche.
 
 Spieler-Sounds: Der Spielercharakter ist mit eigenen Laufgeräuschen ausgestattet.
+
+---
 
 ### 5. Künstliche Intelligenz (KI)
 Die Gegner-KI basiert auf einem flexiblen Behavior Tree System.
@@ -90,6 +100,8 @@ Spezialeffekte für Raben: Abgeschossene Raben zeigen eine realistische Fallanim
 
 Benutzerdefinierte KI-Komponenten: Für die Behavior Trees wurden eigene Tasks, Enums und Decorators entwickelt, um spezifische KI-Verhaltensweisen zu ermöglichen.
 
+---
+
 ### 6. Waffen-System
 Die Standardwaffe wurde durch ein angepasstes Asset ersetzt. Die Projektilfunktion der Waffe wurde durch ein Linecast-System modifiziert, was ein direkteres Shooter-Gefühl vermittelt. Ein integriertes Schadenssystem löst je nach getroffenem Material (Gras, Holz, Stein, Gegner) unterschiedliche Partikel-Effekte aus. Zusätzlich wurde ein Muzzle-Effekt (Mündungsfeuer) als Partikel-Effekt in die Waffe integriert.
 
@@ -97,11 +109,68 @@ Munition und Nachladen: Die Waffe verfügt über zwei Schuss. Nach dem Verbrauch
 
 Schuss-Cooldown: Ein Cooldown-System reguliert die Feuerrate der Waffe.
 
+---
+
 ### 7. Spielkarte
 Die Spielkarte wurde aus einem externen Asset entnommen und dient als Umgebung für das Spiel.
 
+---
+
 ### 8. Spiellogik
+Die Spiellogik ist bewusst einfach gehalten, sorgt jedoch für einen hohen Wiederspielwert.  
+Vom Hauptmenü aus kann der Spieler eine neue Runde starten. In dieser hat er **2 Minuten Zeit**, um durch das Erlegen von Gegnern möglichst viele Punkte zu sammeln.  
+Sollte der Spieler merken, dass die Runde schlecht läuft, kann er jederzeit **neustarten** und von Null beginnen.  
+Nach Ablauf der Zeit wird das erzielte Ergebnis mit der **bisherigen Bestpunktzahl** verglichen. Die höchste Punktzahl wird gespeichert, sodass der Spieler motiviert bleibt, seine eigene Bestmarke zu übertreffen.
+
+---
 
 ### 9. UI
+Das User Interface umfasst verschiedene Bereiche:  
+
+- **Hauptmenü**  
+  - Startmenü  
+  - Optionen  
+  - Credits  
+
+- **Während des Spiels**  
+  - Anzeige der verbleibenden Zeit  
+  - Aktuelle Punktzahl  
+  - Waffe mit sichtbarer Munitionsanzeige (verbliebene Patronen werden ausgegraut)  
+  - Fadenkreuz (Crosshair) zur Zielerfassung  
+  - Kurzzeitige Darstellung der Steuerung als Tutorial  
+  - Aufruf des Pausenmenüs über die Taste *ESC*  
+
+- **Spielende**  
+  - Automatisches Öffnen des Game-Over-Bildschirms mit Endstand  
+
+---
 
 ### 10. Menü
+Es gibt insgesamt **vier Menüs**:
+
+- **Hauptmenü**  
+  - *Start*: Spiel starten  
+  - *Options*: Optionen öffnen  
+  - *Credits*: Credits anzeigen  
+  - *Quit*: Spiel beenden  
+
+- **Optionsmenü**  
+  - Einstellung der Renderqualität: *Low, Medium, High, Epic, Ultra*  
+  - Aktivieren/Deaktivieren von **VSync**  
+  - Zwei Audio-Slider:  
+    - Musiklautstärke  
+    - Soundeffekte  
+
+- **Pausenmenü**  
+  - *Resume*: zurück ins Spiel  
+  - *Restart*: Runde neustarten  
+  - *Main Menu*: zurück ins Hauptmenü  
+  - *Quit*: Spiel beenden  
+
+- **Game-Over-Menü**  
+  - Anzeige der aktuellen Punktzahl  
+  - Anzeige der besten bisher erreichten Punktzahl  
+  - *Restart*: neue Runde starten  
+  - *Main Menu*: zurück ins Hauptmenü  
+  - *Quit*: Spiel beenden  
+
