@@ -34,9 +34,17 @@ Selbst scheinbar friedliche Tiere werden gefährlich, wenn du sie attackierst, u
 Dein Ziel:
 Plane deine Jagd geschickt, nutze die Umgebung zu deinem Vorteil und behalte deine Punktzahl im Auge. Nur wer die Verhaltensweisen der Tiere versteht und präzise handelt, wird zum erfolgreichsten "Desert Hunter" aufsteigen!
 
+## Spielbare Anwendung
+
+Google Drive Ordner 
+https://drive.google.com/drive/folders/1I3CtBBThj1Ybz90qsS_D30olLyEEX41g?usp=drive_link
+
+Gezipter Ordner
+https://drive.google.com/file/d/1eQGpSIOHs6QBpbMo-xqs2cmrhQh7BRw9/view?usp=drive_link
+
 ## Gameplay Video
 
-[Hier Gameplay Video einfügen]
+https://drive.google.com/file/d/1T4G0pYN5Oz_aaj9HPmJzEc6k02wmkkwM/view?usp=drive_link
 
 ## Was gibt es für Eingabemöglichkeiten?
 
