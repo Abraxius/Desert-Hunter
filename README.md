@@ -120,7 +120,7 @@ Die Spielkarte wurde aus einem externen Asset entnommen und dient als Umgebung f
 Die Spiellogik ist bewusst einfach gehalten, sorgt jedoch für einen hohen Wiederspielwert.  
 Vom Hauptmenü aus kann der Spieler eine neue Runde starten. In dieser hat er **2 Minuten Zeit**, um durch das Erlegen von Gegnern möglichst viele Punkte zu sammeln.  
 Sollte der Spieler merken, dass die Runde schlecht läuft, kann er jederzeit **neustarten** und von Null beginnen.  
-Nach Ablauf der Zeit wird das erzielte Ergebnis mit der **bisherigen Bestpunktzahl** verglichen. Die höchste Punktzahl wird gespeichert, sodass der Spieler motiviert bleibt, seine eigene Bestmarke zu übertreffen.
+Nach Ablauf der Zeit wird das erzielte Ergebnis und der **High Score** gezeigt. Die höchste Punktzahl wird gespeichert, sodass der Spieler motiviert bleibt, seine eigene High Score zu übertreffen.
 
 ---
 
@@ -169,7 +169,7 @@ Es gibt insgesamt **vier Menüs**:
 
 - **Game-Over-Menü**  
   - Anzeige der aktuellen Punktzahl  
-  - Anzeige der besten bisher erreichten Punktzahl  
+  - Anzeige der High Score  
   - *Restart*: neue Runde starten  
   - *Main Menu*: zurück ins Hauptmenü  
   - *Quit*: Spiel beenden  
